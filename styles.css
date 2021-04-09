@@ -1,0 +1,283 @@
+:root {
+  --primary-clr-dark: hsl(179, 62%, 43%);
+  --primary-clr-med: hsla(179, 65%, 46%, 0.89);
+  --primary-clr-light: hsl(71, 73%, 54%);
+
+  --secondary-clr-dark: hsl(218, 22%, 67%);
+  --secondary-clr-light: hsl(204, 43%, 93%);
+
+  --ff: "Karla", sans-serif;
+
+  --fw-n: 400;
+  --fw-b: 700;
+
+  --pd-left: 1.3rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--ff);
+  font-weight: var(--fw-n);
+  color: var(--secondary-clr-light);
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+/* Typography */
+
+.about__join {
+  color: var(--primary-clr-dark);
+}
+
+.about__guarantee {
+  color: var(--primary-clr-light);
+}
+
+.about__desc {
+  color: var(--secondary-clr-dark);
+}
+
+.about__join,
+.about__guarantee,
+.monthly-sub,
+.reassure {
+  font-weight: var(--fw-b);
+}
+
+.price {
+  font-weight: var(--fw-b);
+}
+
+span {
+  font-weight: var(--fw-n);
+}
+
+.subscription__desc {
+  color: var(--secondary-clr-light);
+}
+
+.sign-up {
+  font-weight: var(--fw-b);
+  background-color: var(--primary-clr-light);
+  color: var(--secondary-clr-light);
+}
+
+li {
+  font-weight: var(--fw-n);
+  list-style: none;
+  line-height: 1.5;
+  color: var(--secondary-clr-light);
+}
+
+/* Utility Classes */
+
+.split-left {
+  background-color: var(--primary-clr-dark);
+  flex: 1;
+}
+
+.split-right {
+  background-color: var(--primary-clr-med);
+  flex: 1;
+}
+
+/* Layout */
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  --primary-clr-shadow: hsla(179, 65%, 46%, 0.356);
+  overflow: hidden;
+  border-radius: 10px;
+  width: 85%;
+  box-shadow: 0 0 50px var(--primary-clr-shadow);
+}
+
+.about__join,
+.about__guarantee,
+.about__desc {
+  padding: 0 var(--pd-left);
+}
+
+.about {
+  padding: 1.5em 0;
+}
+
+.about__guarantee {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.about__join {
+  font-size: 1.35rem;
+}
+
+.about__desc {
+  line-height: 2;
+  font-size: 0.9rem;
+}
+
+.monthly-sub,
+.subscription__price,
+.subscription__desc {
+  padding-left: var(--pd-left);
+}
+
+.monthly-sub {
+  font-size: 1.25rem;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.subscription__price {
+  font-size: 2rem;
+  padding-bottom: 0.5em;
+}
+
+span {
+  display: inline-block;
+  transform: translateY(-30%);
+  padding-left: 0.3em;
+  font-size: 0.9rem;
+  color: var(--secondary-clr-light);
+}
+
+.subscription__desc {
+  padding-bottom: 1.5em;
+}
+
+.sign-up {
+  border-radius: 5px;
+  padding: 1em;
+  margin: 0 var(--pd-left) 1.5em;
+  box-shadow: 0 0 20px rgba(22, 22, 22, 0.205);
+  text-align: center;
+}
+
+.sign-up:hover {
+  background: var(--primary-clr-med);
+  cursor: pointer;
+}
+
+.why-us,
+ul {
+  padding-left: var(--pd-left);
+}
+
+.why-us {
+  font-size: 1.25rem;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+li {
+  font-size: 0.9rem;
+}
+
+li:last-child {
+  padding-bottom: 2em;
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Media Queries */
+
+@media only screen and (min-width: 478px) and (max-width: 800px) {
+  .about {
+    text-align: center;
+  }
+
+  .about__join {
+    font-size: 2rem;
+    padding-right: 1.3rem;
+  }
+
+  .monthly-sub {
+    font-size: 2em;
+    padding-right: 1.3rem;
+  }
+
+  .info__subscription {
+    text-align: center;
+  }
+
+  .info__reassure {
+    text-align: center;
+  }
+
+  .sign-up {
+    max-width: 22rem;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .why-us {
+    font-size: 2rem;
+    padding-right: 1.3rem;
+  }
+
+  li {
+    line-height: 1.8;
+    padding-right: 1.3rem;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .card {
+    max-width: 40rem;
+  }
+
+  .info-margin-desktop {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 1em;
+  }
+
+  .about__join {
+    font-size: 1.5rem;
+  }
+
+  .about__guarantee {
+    font-size: 1.125rem;
+  }
+
+  .about__desc {
+    font-size: 1rem;
+  }
+
+  .split {
+    flex-direction: row;
+  }
+
+  .monthly-sub {
+    font-size: 1.125rem;
+  }
+
+  .sign-up {
+    padding: 0.9em;
+    margin-right: 2.5em;
+  }
+
+  .why-us {
+    font-size: 1.125rem;
+  }
+}
